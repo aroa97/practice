@@ -1,7 +1,16 @@
-url : Uniform Resource Locator / 쉽게 말해서, 웹 페이지를 찾기위한 주소
 cpu : central processing unit, central/main processor / 중앙 처리 장치
 exe : execute / 실행하다
 e : 자연상수, 오일러 수
+exponent : 지수
+url : Uniform Resource Locator / 쉽게 말해서, 웹 페이지를 찾기위한 주소
 logistic : log 형태
 sigmoid : s자 모양의 / sigma
-exponent : 지수
+NumPy : Numerical Python
+statistics : 통계학 - 기술 : describe
+			  추론 : estimate(추정, 예측)
+normalize : 정규화하다
+SI : 국제단위계(國際單位系, 프랑스어: Système international d’unités, 영어: International System Units 약칭 SI)
+axis : 축
+Visual servoing : 비전센서에서 추출한 피드백 정보를 이용하여 로봇의 동작을 제어하는 기술
+		       예를 들어 시각처리로 알아낸 정보로 팔을 제어해 과일을 따거나 물건을 잡는 등의 행동
+		       나무가지가 과일을 가리면 시점을 바꾸어 손이 닿을 수 있는 경로를 실시간으로 계획
