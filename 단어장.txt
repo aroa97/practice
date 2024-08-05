@@ -1,7 +1,0 @@
-url : Uniform Resource Locator / 쉽게 말해서, 웹 페이지를 찾기위한 주소
-cpu : central processing unit, central/main processor / 중앙 처리 장치
-exe : execute / 실행하다
-e : 자연상수, 오일러 수
-logistic : log 형태
-sigmoid : s자 모양의 / sigma
-exponent : 지수
