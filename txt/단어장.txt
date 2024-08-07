@@ -8,6 +8,7 @@ sigmoid : s자 모양의 / sigma
 NumPy : Numerical Python
 statistics : 통계학 - 기술 : describe
 			  추론 : estimate(추정, 예측)
+norm : 표준, 기준, 규범
 normalize : 정규화하다
 SI : 국제단위계(國際單位系, 프랑스어: Système international d’unités, 영어: International System Units 약칭 SI)
 axis : 축
@@ -20,9 +21,30 @@ population parameter : 모수 (모집단의 특성을 나타내는 수치)
 gradient : 편미분, 기울기
 ReLU : Rectified Linear Unit
 propogation : 전파, 전달
-orthogonal : 직각
+orthogonal : 직각, 직교
+diagonal : 대각
 PCA : Principal Component Analysis / 주성분 분석, 다변량 분석
 standard deviation : 표준 편차
 EDA : Exploratory Data Analysis / 탐색적 데이터 분석
-단위행렬 : Equity | Identity
+단위행렬 : Equity | Identity (항등식)
 determinant : 행렬식
+RNN : Recurrent Neural Network
+CNN : Convolutional neural network
+variance : 분산
+one hot encoding : 범주형 데이터를 표현하는 유사한 기술
+척도 - 명목  -
+                    |  -  범주형 데이터
+       - 순서  -
+
+       - 등간  -
+                    |  -  연속형 데이터
+       - 비율  -
+
+attribute, property : 속성
+transpose : 전치 (행과 열을 교환)
+rmse : root mean square error
+entropy : 균형, 불확실성의 정도
+cross entropy : 교차 엔트로피 / 분류
+probability : 확률
+distribution : 분포
+describe : 묘사하다
