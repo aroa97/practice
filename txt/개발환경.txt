@@ -27,3 +27,8 @@ C:\ProgramData\anaconda3\envs
 
 jupyter notebook 설치
 conda install jupyter
+
+
+윈도우하의 우분투/ubuntu(22.04)
+사용자명 : aiteam
+패스워드 : aiteama

@@ -31,6 +31,7 @@ determinant : 행렬식
 RNN : Recurrent Neural Network
 CNN : Convolutional neural network
 variance : 분산
+Advanced Package Tool
 one hot encoding : 범주형 데이터를 표현하는 유사한 기술
 척도 - 명목  -
                     |  -  범주형 데이터(categorical)
@@ -57,3 +58,7 @@ SQL : Structured Query Language / 관계형 데이터베이스 관리 시스템�
 integration : 통합
 imputation : 대체
 churn :  이탈한 고객을 측정하는 지표
+likelihood : 우도, 가능도
+permutation : 순열
+combination : 조합
+odds : 배당률
