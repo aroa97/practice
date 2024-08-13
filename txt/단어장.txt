@@ -29,7 +29,8 @@ EDA : Exploratory Data Analysis / 탐색적 데이터 분석
 단위행렬 : Equity | Identity (항등식)
 determinant : 행렬식
 RNN : Recurrent Neural Network
-CNN : Convolutional neural network
+CNN : Convolutional Neural Network
+GAN : Generative Adversarial Networks / 적대적 생성 신경망, 생산적 적대 신경망
 variance : 분산
 Advanced Package Tool
 one hot encoding : 범주형 데이터를 표현하는 유사한 기술
@@ -62,3 +63,12 @@ likelihood : 우도, 가능도
 permutation : 순열
 combination : 조합
 odds : 배당률
+GPT : Generative pre-trained transformer
+LLM : Large Language Models / 대규모 언어 모델
+diffusion : 확산, 발산
+AI : artificial intelligence / 인공지능
+AGI : artificial general intelligence / 강인공지능
+TPE : Task(작업) Performance(성능) Experience(경험)
+pmf : probability mass function / 확률질량함수
+pdf : probability dense function / 확률밀도함수
+intercept : y절편
