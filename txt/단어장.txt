@@ -79,3 +79,10 @@ defect : 불량, 결함
 detection : 감지
 gradient descent : 경사하강법
 Adaline : Adaptive Linear Neuron | 적응형 선형 뉴런 / 퍼센트론의 향상된 버전
+deprecate : 반대, 불찬성, 항의; 애원, 탄원
+cm : colormap
+accuracy : 정확, 정확도
+predict : 예측(예견)하다
+
+hsv : 색을 표현하는 방법의 하나이다. RGB 와는 다르게 색을 나타내는 방법으로, 색조(Hue), 채도(Saturation), 명도(Value)의 3요소로 구성된다. HSB(Brightness)라는 표기도 쓰인다.
+
