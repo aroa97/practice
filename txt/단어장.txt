@@ -30,6 +30,7 @@ EDA : Exploratory Data Analysis / 탐색적 데이터 분석
 determinant : 행렬식
 RNN : Recurrent Neural Network
 CNN : Convolutional Neural Network
+KNN : K-Nearest Neighbor / K-최근접 이웃
 GAN : Generative Adversarial Networks / 적대적 생성 신경망, 생산적 적대 신경망
 variance : 분산
 Advanced Package Tool
@@ -86,3 +87,8 @@ predict : 예측(예견)하다
 
 hsv : 색을 표현하는 방법의 하나이다. RGB 와는 다르게 색을 나타내는 방법으로, 색조(Hue), 채도(Saturation), 명도(Value)의 3요소로 구성된다. HSB(Brightness)라는 표기도 쓰인다.
 
+Sequential : 순차적인
+k-fold cross validation : k겹 교차 검증
+augment : 증강
+HDF5 : Hierarchical Data Format / 고성능 데이터포맷 또는 DB 
+distance : 거리
