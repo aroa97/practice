@@ -29,7 +29,7 @@ EDA : Exploratory Data Analysis / 탐색적 데이터 분석
 단위행렬 : Equity | Identity (항등식)
 determinant : 행렬식
 RNN : Recurrent Neural Network
-CNN : Convolutional Neural Network
+CNN : Convolutional Neural Network / 합성곱 신경망
 KNN : K-Nearest Neighbor / K-최근접 이웃
 GAN : Generative Adversarial Networks / 적대적 생성 신경망, 생산적 적대 신경망
 variance : 분산
@@ -92,3 +92,4 @@ k-fold cross validation : k겹 교차 검증
 augment : 증강
 HDF5 : Hierarchical Data Format / 고성능 데이터포맷 또는 DB 
 distance : 거리
+polynomial : 다항의
