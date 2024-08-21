@@ -26,6 +26,7 @@ diagonal : 대각
 PCA : Principal Component Analysis / 주성분 분석, 다변량 분석
 standard deviation : 표준 편차
 EDA : Exploratory Data Analysis / 탐색적 데이터 분석
+analysis : 분석
 단위행렬 : Equity | Identity (항등식)
 determinant : 행렬식
 RNN : Recurrent Neural Network
@@ -84,6 +85,7 @@ deprecate : 반대, 불찬성, 항의; 애원, 탄원
 cm : colormap
 accuracy : 정확, 정확도
 predict : 예측(예견)하다
+prediction : 예측, 예견
 
 hsv : 색을 표현하는 방법의 하나이다. RGB 와는 다르게 색을 나타내는 방법으로, 색조(Hue), 채도(Saturation), 명도(Value)의 3요소로 구성된다. HSB(Brightness)라는 표기도 쓰인다.
 
@@ -93,3 +95,17 @@ augment : 증강
 HDF5 : Hierarchical Data Format / 고성능 데이터포맷 또는 DB 
 distance : 거리
 polynomial : 다항의
+decision : 결정, 판단
+complexity : 복잡함, 복잡도
+
+Stochastic gradient descent : 확률 경사 하강법
+support vector machine : 두 카테고리 중 어느 하나에 속한 데이터의 집합이 주어졌을 때, SVM 알고리즘은 주어진 데이터 집합을 바탕으로 하여 새로운 데이터가 어느 카테고리에 속할지 판단하는 비확률적 이진 선형 분류 모델을 만든다.
+
+criterion : (판단이나 결정을 위한) 기준
+Information Gain(IG) : 정보 이득
+pruning : 가지치기
+impurity : 불순도
+significant : 유의미한, 중요한
+ensemble : 전체적인 어울림이나 통일, 앙상블
+배깅(Bagging, Bootstrap aggregating) : 부트스트랩(Bootstrap)을 통해서 다양한 데이터셋을 만들고 이를 학습시킨 모델을 모으는(Aggregating) 방법
+
