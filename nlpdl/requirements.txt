@@ -1,0 +1,24 @@
+jupyter 
+pandas 
+html5lib 
+seaborn 
+matplotlib         # to avoid MatplotlibDeprecationWarning
+nltk
+tqdm
+seqeval 
+transformers
+sentencepiece
+mxnet
+gluonnlp
+scikit-learn    # package name registered in PyPI.org
+wordcloud
+gensim
+xgboost
+wget
+tokenizers
+tensorflow
+h5py         # to avoid issue https://github.com/keras-team/keras/issues/14265
+konlpy
+beautifulsoup4
+kaggle
+numpy           # to avoid issue https://stackoverflow.com/questions/55890813/how-to-fix-object-arrays-cannot-be-loaded-when-allow-pickle-false-for-imdb-loa

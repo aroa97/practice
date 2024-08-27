@@ -32,3 +32,6 @@ conda install jupyter
 윈도우하의 우분투/ubuntu(22.04)
 사용자명 : aiteam
 패스워드 : aiteam
+
+우분투 Anaconda3 경로
+/root/anaconda3
