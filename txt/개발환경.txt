@@ -22,6 +22,12 @@ C:\Program Files\Git
 3.9
 3.11
 
+pycharm 경로
+C:\Program Files\JetBrains\PyCharm Community Edition 2024.2.0.1
+
+intellij 경로
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.0.2
+
 가상환경으로 환경이 설치되는 공간
 C:\ProgramData\anaconda3\envs
 
