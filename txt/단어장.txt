@@ -116,3 +116,5 @@ Punctuation : 문장 부호, 구두점(들), 구두법
 recurrent : 되풀이되는, 반복되는, 재발되는
 start of sentence(sos) : 문장 시작
 perplexity : (무엇을 이해할 수 없어서 느끼는) 당혹감 (=confusion), 당혹스러운[이해하기 힘든] 것
+
+residual : (어떤 과정이 끝나고 난 뒤에) 남은, 잔여[잔류]의
