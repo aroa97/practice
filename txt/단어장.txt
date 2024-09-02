@@ -118,3 +118,5 @@ start of sentence(sos) : 문장 시작
 perplexity : (무엇을 이해할 수 없어서 느끼는) 당혹감 (=confusion), 당혹스러운[이해하기 힘든] 것
 
 residual : (어떤 과정이 끝나고 난 뒤에) 남은, 잔여[잔류]의
+
+luminance : (빛의) 밝기[휘도]
