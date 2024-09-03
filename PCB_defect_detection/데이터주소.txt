@@ -1,0 +1,8 @@
+파일명 : Surface-Defect-Detection-master
+주소 : https://github.com/Charmve/Surface-Defect-Detection/tree/master
+
+파일명 : PCB_DATASET
+주소 : https://github.com/Ixiaohuihuihui/Tiny-Defect-Detection-for-PCB?tab=readme-ov-file
+
+파일명 : VOC_PCB
+주소 : https://github.com/Ixiaohuihuihui/Tiny-Defect-Detection-for-PCB?tab=readme-ov-file

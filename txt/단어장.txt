@@ -120,3 +120,7 @@ perplexity : (무엇을 이해할 수 없어서 느끼는) 당혹감 (=confusion
 residual : (어떤 과정이 끝나고 난 뒤에) 남은, 잔여[잔류]의
 
 luminance : (빛의) 밝기[휘도]
+
+saturate : 포화시키다, 포화 상태를 만들다
+
+RoI : Region of Interest (관심영역)
