@@ -41,3 +41,22 @@ conda install jupyter
 
 우분투 Anaconda3 경로
 /root/anaconda3
+
+MySQL
+port 3306
+root 12341234
+aiteam 12341234
+
+
+oracle
+오라클 포트 1521
+플러그인할 수 있는 DB = localhost:1521/XEPDB1
+EM Express URL: https://localhost:5500/em
+
+오라클 홈
+C:\app\ysj\product\18.0.0\dbhomeXE\
+12341234
+c##madang / madang
+
+JDK
+C:\Java\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin
