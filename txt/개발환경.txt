@@ -42,7 +42,7 @@ conda install jupyter
 우분투 Anaconda3 경로
 /root/anaconda3
 
-MySQL
+윈도우 MySQL
 port 3306
 root 12341234
 aiteam 12341234
@@ -60,3 +60,8 @@ c##madang / madang
 
 JDK
 C:\Java\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin
+
+
+
+
+컨테이너(리눅스용 mysql) 패스워드 1111
