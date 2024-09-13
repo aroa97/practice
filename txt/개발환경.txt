@@ -65,3 +65,17 @@ C:\Java\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin
 
 
 컨테이너(리눅스용 mysql) 패스워드 1111
+
+
+
+가상환경(vb)의 우분투 20
+
+your name : ai
+server name : ai
+
+
+user name : aiteam
+password : aiteam
+
+
+가상환경(virtualbox)의 우분투 20의 mysql
