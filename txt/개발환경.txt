@@ -68,12 +68,10 @@ C:\Java\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin
 
 
 
-가상환경(vb)의 우분투 20
+가상환경(vb)의 우분투 20 - root password : 12341234
 
 your name : ai
 server name : ai
-
-
 user name : aiteam
 password : aiteam
 
