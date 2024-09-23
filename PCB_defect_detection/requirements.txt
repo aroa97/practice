@@ -1,0 +1,12 @@
+# python=3.12.4
+pip
+numpy
+pandas
+streamlit
+matplotlib
+plotly
+sqlalchemy
+pymysql
+mlxtend
+pyecharts
+streamlit-echarts
