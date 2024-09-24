@@ -9,6 +9,7 @@ with col1:
     st.subheader("윤선준")
 
     st.markdown("**담당업무**")
+    st.text('Project Manager')
 
     with st.expander("More"):
         st.subheader("인적사항")
@@ -33,6 +34,7 @@ with col2:
     st.subheader("김성일")
 
     st.markdown("**담당업무**")
+    st.text('데이터 수집 및 시장조사')
 
     with st.expander("More"):
         st.subheader("인적사항")
@@ -41,6 +43,7 @@ with col3:
     st.subheader("왕재권")
 
     st.markdown("**담당업무**")
+    st.text('데이터 수집 및 시장조사')
 
     with st.expander("More"):
         st.subheader("인적사항")

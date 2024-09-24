@@ -47,6 +47,12 @@ port 3306
 root 12341234
 aiteam 12341234
 
+mysql과 프로그램을 연결해주는 커넥터/ODBC | MySQL Connector ODBC 9.0
+C:\Program Files\MySQL\MySQL Connector ODBC 9.0\
+
+윈도우-mysql 커넥터 설정은
+127.0.0.1 : 3306
+
 
 oracle
 오라클 포트 1521
@@ -77,3 +83,6 @@ password : aiteam
 
 
 가상환경(virtualbox)의 우분투 20의 mysql
+
+
+
