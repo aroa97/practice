@@ -28,8 +28,8 @@ with tab[0]:
         func.image_resize('diff_02.png',__file__, img_size)
         func.image_resize('diff_03.png',__file__, img_size)
 
-with st.expander("Source Code"):
-    st.code("""
+    with st.expander("Source Code"):
+        st.code("""
 import cv2
 import numpy as np 
 import matplotlib.pyplot as plt 

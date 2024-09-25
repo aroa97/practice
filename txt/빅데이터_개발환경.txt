@@ -1,0 +1,5 @@
+server01 mac주소 080027D381B0
+            어댑터 2 호스트 전용 어댑터 mac주소 080027D6DD92
+
+root passwd 
+adminuser

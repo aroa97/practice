@@ -12,3 +12,8 @@ st.markdown("""
 실물PCB 데이터셋\n
 주소 : https://github.com/Ixiaohuihuihui/Tiny-Defect-Detection-for-PCB?tab=readme-ov-file
 """)
+
+st.markdown("""
+VGG16 이미지\n
+주소 : https://neurohive.io/en/popular-networks/vgg16/
+""")

@@ -85,4 +85,12 @@ password : aiteam
 가상환경(virtualbox)의 우분투 20의 mysql
 
 
+java 개발환경1
+jdk17
 
+java 개발환경2 - 이클립스
+jre 내장
+C:\Java
+
+자바 작업 경로
+C:\Java\workspace
