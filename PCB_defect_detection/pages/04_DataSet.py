@@ -54,7 +54,7 @@ with tab[1]:
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        func.image_resize('07.jpg',__file__, 250)
+        func.image_resize('07.JPG',__file__, 250)
         st.text('정상 PCB : 12개')
     with col2:
         func.image_resize('pcb_defect_marking_01.png',__file__, 250)

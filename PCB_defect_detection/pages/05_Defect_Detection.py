@@ -190,11 +190,41 @@ history = model.fit(trainGen,
 
     with tab1[4]:
         st.subheader('Model Evaluation')
-        radio_evaluation = st.radio(label="", label_visibility='collapsed', options=["학습 결과 시각화", "혼동 행렬"], horizontal=True)
+        radio_evaluation = st.radio(label="", label_visibility='collapsed', options=["학습 결과 시각화", "혼동 행렬", "도출 결과"], horizontal=True)
         if radio_evaluation == '학습 결과 시각화':
-            st.text("")
+            col1, col2, col3 = st.columns(3)
+
+            with col1:
+                st.markdown("max_accuracy : 0.9594358205795288")
+                st.markdown("max_val_accuracy : **:red[0.9905047416687012]**")
+                st.markdown("min_loss : 0.13344751298427582")
+                st.markdown("min_cal_loss : 0.03660937026143074")
+                st.image('./streamlit_images/defect_detection/accuracy_not_use_vgg16.png', use_column_width=True)
+                st.image('./streamlit_images/defect_detection/loss_not_use_vgg16.png', use_column_width=True)
+            with col2:
+                st.markdown("max_accuracy : 0.9885172247886658")
+                st.markdown("max_val_accuracy : **:red[0.998000979423523]**")
+                st.markdown("min_loss : 0.04347741976380348")
+                st.markdown("min_cal_loss : 0.008867921307682991")
+                st.image('./streamlit_images/defect_detection/accuracy_not_use_vgg16_2.png', use_column_width=True)
+                st.image('./streamlit_images/defect_detection/loss_not_use_vgg16_2.png', use_column_width=True)
+            with col3:
+                st.markdown("max_accuracy : 0.9601846933364868")
+                st.markdown("max_val_accuracy : **:red[0.9940029978752136]**")
+                st.markdown("min_loss : 0.16124936938285828")
+                st.markdown("min_cal_loss : 0.03154732286930084")
+                st.image('./streamlit_images/defect_detection/accuracy_use_vgg16.png', use_column_width=True)
+                st.image('./streamlit_images/defect_detection/loss_use_vgg16.png', use_column_width=True)
         elif radio_evaluation == '혼동 행렬':
-            st.text("")
+            col1, col2, col3 = st.columns(3)
+
+            with col1:
+                st.image('./streamlit_images/defect_detection/confusion_matrix_not_use_vgg16.png', use_column_width=True)
+            with col2:
+                st.image('./streamlit_images/defect_detection/confusion_matrix_not_use_vgg16_2.png', use_column_width=True)
+            with col3:
+                st.image('./streamlit_images/defect_detection/confusion_matrix_use_vgg16_2.png', use_column_width=True)
+
     with tab1[5]:
         st.subheader('Model Test')
 
