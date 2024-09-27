@@ -166,13 +166,12 @@ model = Model(inputs=vgg_model.input, outputs=predictions)
                     st.image("./streamlit_images/defect_detection/use_vgg16_model_summary.png", use_column_width=True)
             
         elif radio_train == '모델 학습':
-            with st.expander('Source Code', expanded=True):
-                st.code("""
+            st.code("""
 model.compile(loss='sparse_categorical_crossentropy', 
               optimizer='adam', 
               metrics=['accuracy'])
                     
-checkpoint = ModelCheckpoint('./model/not_use_vgg16_2.keras',
+checkpoint = ModelCheckpoint('./model/model.keras',
                              monitor='val_accuracy', 
                              verbose=1, 
                              save_best_only=True, 
@@ -219,11 +218,32 @@ history = model.fit(trainGen,
             col1, col2, col3 = st.columns(3)
 
             with col1:
+                st.markdown("### accuracy : **:red[0.930]** 5347326336831")
                 st.image('./streamlit_images/defect_detection/confusion_matrix_not_use_vgg16.png', use_column_width=True)
             with col2:
+                st.markdown("### accuracy : **:red[0.997]** 0014992503748")
                 st.image('./streamlit_images/defect_detection/confusion_matrix_not_use_vgg16_2.png', use_column_width=True)
             with col3:
+                st.markdown("### accuracy : **:red[0.985]** 0074962518741")
                 st.image('./streamlit_images/defect_detection/confusion_matrix_use_vgg16_2.png', use_column_width=True)
+        elif radio_evaluation == '도출 결과':
+            col1, col2, _ = st.columns(3)
+            with col1:
+                st.markdown('임의로 층 설계한 모델')
+                st.markdown("### **:red[0.930]** 5347326336831")
+                st.markdown('VGG16 모델을 넣어서 설계')
+                st.markdown("### **:red[0.997]** 0014992503748")
+                st.markdown('VGG16을 사용한 모델')
+                st.markdown("### **:red[0.985]** 0074962518741")
+            with col2:
+                st.markdown("첫 번째 모델은 예측률이 부족하고")
+                st.markdown("두 번째 모델은 과적합이 심해 일반화가 안 되어있습니다.")
+                st.markdown("\n")
+                st.markdown("""**VGG16을 사용한 모델의 경우**
+                                \n- 첫 번째 모델보다 성능이 향상된 모습
+                                \n- 두 번째 모델보다 일반화가 된 모습
+                                \n- 다른 두 모델보다 크기가 작은 모습""")
+                func.image_resize('model_size.png', __file__, 100)
 
     with tab1[5]:
         st.subheader('Model Test')
