@@ -8,3 +8,6 @@ col1, col2, col3 = st.columns(3)
 with col1 :
     st.markdown("**VAE**")
     st.text("Variational Autoencoder (변이형 오토인코터)")
+
+    st.markdown('**GAN**')
+    st.text("Generative Adversarial Networks (적대적 생성 신경망)")

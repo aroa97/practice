@@ -17,3 +17,23 @@ st.markdown("""
 VGG16 이미지\n
 주소 : https://neurohive.io/en/popular-networks/vgg16/
 """)
+
+st.markdowm("""
+Yolo 이미지\n
+주소 : https://arxiv.org/pdf/1506.02640
+""")
+
+st.markdown("""
+GAN 이미지\n
+주소 : https://www.youtube.com/watch?v=JtJH3wG_VLU
+""")
+
+st.markdown("""
+Vision Transformer 이미지\n
+주소 : https://github.com/microsoft/Focal-Transformer?tab=readme-ov-file
+""")
+
+st.markdown("""
+스마트팩토리 이미지\n
+주소 : http://www.softonnet.com/kr/business/smart_factory.php
+""")

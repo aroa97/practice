@@ -3,21 +3,57 @@ from streamlit_function import func
 
 func.set_title(__file__)
 
-tab = st.tabs(['데이터 전처리', '빅데이터'])
+tab = st.tabs(['데이터 생성', '데이터 전처리', '빅데이터', "웹서버", "스마트팩토리"])
 
 with tab[0]:
+    st.header("Data Generation")
+    radio_collection = st.radio(label="", label_visibility='collapsed', options=["VAE", "GAN", "Vision Transformer"], horizontal=True)
+
+    if radio_collection == "VAE":
+        st.image("./streamlit_images/future_plans/autoencoder.png", use_column_width=True)
+    elif radio_collection == "GAN":
+        st.page_link('./pages/98_Source.py', label='Source', icon="🚨")
+        st.image("./streamlit_images/future_plans/GAN.png", use_column_width=True)
+    elif radio_collection == "Vision Transformer":
+        st.page_link('./pages/98_Source.py', label='Source', icon="🚨")
+        st.text('focal transformer')
+        st.image("./streamlit_images/future_plans/focal_transformer.png", use_column_width=True)
+
+with tab[1]:
     st.header("Data Preprocessing")
 
-    radio_processing = st.radio(label="", label_visibility='collapsed', options=["VAE", "Albumentations"], horizontal=True)
-    if radio_processing == "VAE":
-        # st.subheader("VAE")
-        # st.text("Variational Autoencoder")
-        st.image("./streamlit_images/future_plans/autoencoder.png", use_column_width=True)
+    radio_processing = st.radio(label="", label_visibility='collapsed', options=['Hsv Color Mask', 'Histogram Analysis', "Histogram Backprojection", 
+                                                                                 "Labeling", 'Abs Diff', 'Sobel Edge', 'Canny Edge', 'Template Matching', "Albumentations"], horizontal=True)
+    if radio_processing == "Hsv Color Mask":
+        func.image_resize("hsv_color_mask.png", __file__, 500)
+
+    elif radio_processing == "Histogram Analysis":
+        func.image_resize("histogram_analysis.png", __file__, 500)
+
+    elif radio_processing == "Histogram Backprojection":
+        func.image_resize("histogram_backprojection_01.png", __file__, 300)
+        func.image_resize("histogram_backprojection_02.png", __file__, 300)
+
+    elif radio_processing == "Labeling":
+        func.image_resize("labeling.png", __file__, 300)
+
+    elif radio_processing == "Abs Diff":
+        func.image_resize("abs_diff.png", __file__, 400)
+
+    elif radio_processing == "Sobel Edge":
+        func.image_resize("sobel_edge.png", __file__, 300)
+
+    elif radio_processing == "Canny Edge":
+        func.image_resize("canny_edge.png", __file__, 500)
+
+    elif radio_processing == "Template Matching":
+        func.image_resize("template_matching.png", __file__, 400)
+
     elif radio_processing == "Albumentations":
         # st.subheader("Albumentations")
         func.image_resize("albumentations.jpg", __file__, 700)
 
-with tab[1]:
+with tab[2]:
     st.header("BigData")
 
     radio_bigdata = st.radio(label="", label_visibility='collapsed', options=["VirtualBox", "Xshell", "Cloudera Manager", 'Hue, Xftp', "Execute Program"], horizontal=True)
@@ -40,5 +76,21 @@ with tab[1]:
         func.image_resize('bigdata_02.png' ,__file__, 40)
         func.image_resize('bigdata_03.png' ,__file__, 600)
     
-    
-    
+with tab[3]:
+    st.header("WebServer")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.image('./streamlit_images/future_plans/aws_server.png', use_column_width=True)
+    with col2:
+        st.image('./streamlit_images/future_plans/aws_server_web.png', use_column_width=True)
+    with col3:
+        func.image_resize('tomcat_logo.png', __file__, 150)
+        func.image_resize('nginx_logo.png', __file__, 150)
+
+with tab[4]:
+    st.header("SmartFactory")    
+
+    st.page_link('./pages/98_Source.py', label='Source', icon="🚨")
+    st.image('./streamlit_images/future_plans/smart_factory.png', use_column_width=True)

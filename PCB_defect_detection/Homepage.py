@@ -3,7 +3,7 @@ import streamlit as st
 if __name__ == "__main__":
     st.set_page_config(page_title="Homepage", layout="wide")
 
-    st.title("PCB Defect Detection")
+    st.title("PCB Defect Detection Project")
 
     st.image("./streamlit_images/background_image2.png", width=500)
     

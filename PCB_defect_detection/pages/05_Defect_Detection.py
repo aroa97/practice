@@ -236,18 +236,102 @@ history = model.fit(trainGen,
                 st.markdown('VGG16을 사용한 모델')
                 st.markdown("### **:red[0.985]** 0074962518741")
             with col2:
-                st.markdown("첫 번째 모델은 예측률이 부족하고")
-                st.markdown("두 번째 모델은 과적합이 심해 일반화가 안 되어있습니다.")
+                st.markdown("첫 번째 모델은 :red[**예측률이 부족**]하고")
+                st.markdown("두 번째 모델은 :red[**과적합**]이 심해 일반화가 안 되어있습니다.")
                 st.markdown("\n")
                 st.markdown("""**VGG16을 사용한 모델의 경우**
-                                \n- 첫 번째 모델보다 성능이 향상된 모습
-                                \n- 두 번째 모델보다 일반화가 된 모습
-                                \n- 다른 두 모델보다 크기가 작은 모습""")
+                                \n- 첫 번째 모델보다 :red[**성능이 향상**]된 모습
+                                \n- 두 번째 모델보다 :red[**일반화**]가 된 모습
+                                \n- 다른 두 모델보다 :red[**크기가 작은**] 모습""")
                 func.image_resize('model_size.png', __file__, 100)
 
     with tab1[5]:
         st.subheader('Model Test')
 
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.markdown("**Opencv를 활용한 모델 테스트**")
+            st.image('./streamlit_images/defect_detection/model_test.gif', use_column_width=True)
+        with col2:
+            for i in range(3):
+                st.markdown("\n")
+            st.markdown("""drag and drop을 통해 영역을 지정
+                           \n지정한 영역에 대한 결함 예측 후 시각화""")
+
     col1 , col2, col3 = st.columns(3)    
 elif radio_sidebar == '실물 데이터셋':
-    st.text("고양이")
+    tab2 = st.tabs(['데이터 전처리', '학습시킨 결함 종류', '모델 학습', '모델 평가', '모델 테스트'])
+
+    with tab2[0]:
+        st.subheader('Data Preprocessing')
+
+        radio1 = st.radio(label="", label_visibility='collapsed', horizontal=True, options=["Resize", "Defect Area Normalization"])
+        
+        if radio1 == "Resize":
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown("**3034 X 1586**")
+                func.image_resize("pcb_resize_before.JPG", __file__, 300)
+            with col2:
+                st.markdown("**640 X 640**")
+                func.image_resize("pcb_resize_after.JPG", __file__, 300)
+        elif radio1 == "Defect Area Normalization":
+            func.image_resize("normalization_xml.png", __file__, 500)
+    with tab2[1]:
+        st.subheader('Defect Type')
+
+        radio2 = st.radio(label="", label_visibility='collapsed', options=["Spurious Copper", "Mousebite", "Open Circuit", "Missing Hole", "Spur", "Short"], horizontal=True)
+
+        if radio2 == "Spurious Copper":
+            st.text("")
+        elif radio2 == "Mousebite":
+            st.text("")
+        elif radio2 == "Open Circuit":
+            st.text("")
+        elif radio2 == "Missing Hole":
+            st.text("")
+        elif radio2 == "Spur":
+            st.text("")
+        elif radio2 == "Short":
+            st.text("")
+
+    with tab2[2]:
+        st.subheader('Model Training')
+
+        radio3 = st.radio(label="", label_visibility='collapsed', options=["Yolov5", '모델 학습'], horizontal=True)
+
+        if radio3 == "Yolov5":
+            st.page_link('./pages/98_Source.py', label='Source', icon="🚨")
+            st.text("객체 감지에 뛰어난 딥러닝 모델")
+
+            func.image_resize('yolo.png', __file__, 500)
+        elif radio3 == "모델 학습":
+
+            st.text("bash")
+            st.code("""git clone https://github.com/ultralytics/yolov5""")
+            st.code("""pip install -U -r requirements.txt""")
+
+            st.text("python")
+            st.code('''
+data_yaml_content = """
+train: ../PCB_DATASET/PCB_split/train
+val: ../PCB_DATASET/PCB_split/val
+nc: 6
+names: ['spurious_copper', 'mouse_bite', 'open_circuit', 'missing_hole', 'spur', 'short']
+"""
+                    
+with open('./data/data.yaml', 'w') as f:
+    f.write(data_yaml_content)
+''')
+            
+            st.text("bash")
+            st.code("""
+python ./train.py --img-size 640 --batch-size 16 --epochs 100 --data ./data/data.yaml --cfg ./models/yolov5s.yaml 
+                  --weights ./yolov5s.pt --name my_experiment --save-period 1 --project ./runs/
+""")
+        
+    with tab2[3]:
+        st.subheader('Model Evaluation')
+    with tab2[4]:
+        st.subheader('Model Test')
