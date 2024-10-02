@@ -6,14 +6,18 @@ func.set_title(__file__)
 tab = st.tabs(['데이터 생성', '데이터 전처리', '빅데이터', "웹서버", "스마트팩토리"])
 
 with tab[0]:
-    st.header("Data Generation")
-    radio_collection = st.radio(label="", label_visibility='collapsed', options=["VAE", "GAN", "Vision Transformer"], horizontal=True)
+    st.header("Data Generation") 
+    radio_collection = st.radio(label="generation", label_visibility='collapsed', options=["VAE", "GAN", 'Diffusion Model', "Vision Transformer"], horizontal=True)
 
     if radio_collection == "VAE":
         st.image("./streamlit_images/future_plans/autoencoder.png", use_column_width=True)
     elif radio_collection == "GAN":
         st.page_link('./pages/98_Source.py', label='Source', icon="🚨")
-        st.image("./streamlit_images/future_plans/GAN.png", use_column_width=True)
+        st.image("./streamlit_images/future_plans/GAN.png", width=1200)
+    elif radio_collection == 'Diffusion Model':
+        st.text("Stable Diffusion")
+        st.markdown("https://huggingface.co/spaces/ehild97/SDTest")
+        st.image("./streamlit_images/future_plans/stable_diffusion.png", use_column_width=True)
     elif radio_collection == "Vision Transformer":
         st.page_link('./pages/98_Source.py', label='Source', icon="🚨")
         st.text('focal transformer')
@@ -22,7 +26,7 @@ with tab[0]:
 with tab[1]:
     st.header("Data Preprocessing")
 
-    radio_processing = st.radio(label="", label_visibility='collapsed', options=['Hsv Color Mask', 'Histogram Analysis', "Histogram Backprojection", 
+    radio_processing = st.radio(label="preprocessing", label_visibility='collapsed', options=['Hsv Color Mask', 'Histogram Analysis', "Histogram Backprojection", 
                                                                                  "Labeling", 'Abs Diff', 'Sobel Edge', 'Canny Edge', 'Template Matching', "Albumentations"], horizontal=True)
     if radio_processing == "Hsv Color Mask":
         func.image_resize("hsv_color_mask.png", __file__, 500)
@@ -56,7 +60,7 @@ with tab[1]:
 with tab[2]:
     st.header("BigData")
 
-    radio_bigdata = st.radio(label="", label_visibility='collapsed', options=["VirtualBox", "Xshell", "Cloudera Manager", 'Hue, Xftp', "Execute Program"], horizontal=True)
+    radio_bigdata = st.radio(label="bigdata", label_visibility='collapsed', options=["VirtualBox", "Xshell", "Cloudera Manager", 'Hue, Xftp', "Execute Program"], horizontal=True)
 
     if radio_bigdata == 'VirtualBox':
         func.image_resize('bigdata_05.png' ,__file__, 500)

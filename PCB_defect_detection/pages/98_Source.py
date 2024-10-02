@@ -18,7 +18,7 @@ VGG16 이미지\n
 주소 : https://neurohive.io/en/popular-networks/vgg16/
 """)
 
-st.markdowm("""
+st.markdown("""
 Yolo 이미지\n
 주소 : https://arxiv.org/pdf/1506.02640
 """)

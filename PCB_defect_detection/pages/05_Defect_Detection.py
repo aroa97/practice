@@ -4,7 +4,7 @@ from streamlit_function import func
 func.set_title(__file__)
 
 with st.sidebar:
-    radio_sidebar = st.radio(label="", label_visibility='collapsed', options=["흑백 데이터셋", "실물 데이터셋"])
+    radio_sidebar = st.radio(label="sidebar", label_visibility='collapsed', options=["흑백 데이터셋", "실물 데이터셋"])
     
 if radio_sidebar == '흑백 데이터셋':
     tab1 = st.tabs(['데이터 전처리', '학습시킨 결함 종류', '데이터 증강', '모델 학습', '모델 평가', '모델 테스트'])
@@ -12,10 +12,11 @@ if radio_sidebar == '흑백 데이터셋':
         st.subheader('Data Preprocessing')
 
         func.image_resize('data_preprocessing_01.png', __file__, 500)
+
     with tab1[1]:
         st.subheader('Defect Type')
 
-        radio_defect = st.radio(label="", label_visibility='collapsed', options=["Open(회로 개방)", "Short(회로 단락)", "Copper(구리 결함)", "Mousebit", "Pin-hole", "Spur"], horizontal=True)
+        radio_defect = st.radio(label="defect", label_visibility='collapsed', options=["Open(회로 개방)", "Short(회로 단락)", "Copper(구리 결함)", "Mousebit", "Pin-hole", "Spur"], horizontal=True)
         if radio_defect == "Open(회로 개방)":
             func.image_resize('defect_open.png', __file__, 400)
         elif radio_defect == "Short(회로 단락)":
@@ -28,6 +29,7 @@ if radio_sidebar == '흑백 데이터셋':
             func.image_resize('defect_pinhole.png', __file__, 400)
         elif radio_defect == "Spur":
             func.image_resize('defect_spur.png', __file__, 400)
+
     with tab1[2]:
         st.subheader('Data Augmentation')
 
@@ -48,7 +50,7 @@ if radio_sidebar == '흑백 데이터셋':
     with tab1[3]:
         st.subheader('Model Training')
 
-        radio_train = st.radio(label="", label_visibility='collapsed', options=["전이 학습", "모델 설계", "모델 학습"], horizontal=True)
+        radio_train = st.radio(label="train", label_visibility='collapsed', options=["전이 학습", "모델 설계", "모델 학습"], horizontal=True)
         if radio_train == '전이 학습':
             st.page_link('./pages/98_Source.py', label='Source', icon="🚨")
             col1, col2 = st.columns(2)
@@ -189,7 +191,7 @@ history = model.fit(trainGen,
 
     with tab1[4]:
         st.subheader('Model Evaluation')
-        radio_evaluation = st.radio(label="", label_visibility='collapsed', options=["학습 결과 시각화", "혼동 행렬", "도출 결과"], horizontal=True)
+        radio_evaluation = st.radio(label="evaluation", label_visibility='collapsed', options=["학습 결과 시각화", "혼동 행렬", "도출 결과"], horizontal=True)
         if radio_evaluation == '학습 결과 시각화':
             col1, col2, col3 = st.columns(3)
 
@@ -266,7 +268,7 @@ elif radio_sidebar == '실물 데이터셋':
     with tab2[0]:
         st.subheader('Data Preprocessing')
 
-        radio1 = st.radio(label="", label_visibility='collapsed', horizontal=True, options=["Resize", "Defect Area Normalization"])
+        radio1 = st.radio(label="preprocessing", label_visibility='collapsed', horizontal=True, options=["Resize", "Defect Area Normalization"])
         
         if radio1 == "Resize":
             col1, col2 = st.columns(2)
@@ -281,25 +283,25 @@ elif radio_sidebar == '실물 데이터셋':
     with tab2[1]:
         st.subheader('Defect Type')
 
-        radio2 = st.radio(label="", label_visibility='collapsed', options=["Spurious Copper", "Mousebite", "Open Circuit", "Missing Hole", "Spur", "Short"], horizontal=True)
+        radio2 = st.radio(label="defect", label_visibility='collapsed', options=["Spurious Copper", "Mousebite", "Open Circuit", "Missing Hole", "Spur", "Short"], horizontal=True)
 
         if radio2 == "Spurious Copper":
-            st.text("")
+            st.image("./streamlit_images/defect_detection/pcb_defect_spurious_copper.png", width=600)
         elif radio2 == "Mousebite":
-            st.text("")
+            st.image("./streamlit_images/defect_detection/pcb_defect_mouse_bite.png", width=600)
         elif radio2 == "Open Circuit":
-            st.text("")
+            st.image("./streamlit_images/defect_detection/pcb_defect_open_circuit.png", width=600)
         elif radio2 == "Missing Hole":
-            st.text("")
+            st.image("./streamlit_images/defect_detection/pcb_defect_missing_hole.png", width=600)
         elif radio2 == "Spur":
-            st.text("")
+            st.image("./streamlit_images/defect_detection/pcb_defect_spur.png", width=600)
         elif radio2 == "Short":
-            st.text("")
+            st.image("./streamlit_images/defect_detection/pcb_defect_short.png", width=600)
 
     with tab2[2]:
         st.subheader('Model Training')
 
-        radio3 = st.radio(label="", label_visibility='collapsed', options=["Yolov5", '모델 학습'], horizontal=True)
+        radio3 = st.radio(label="train", label_visibility='collapsed', options=["Yolov5", '모델 학습'], horizontal=True)
 
         if radio3 == "Yolov5":
             st.page_link('./pages/98_Source.py', label='Source', icon="🚨")
@@ -333,5 +335,41 @@ python ./train.py --img-size 640 --batch-size 16 --epochs 100 --data ./data/data
         
     with tab2[3]:
         st.subheader('Model Evaluation')
+
+        radio4 = st.radio(label="evaluation", label_visibility='collapsed', options=["혼동 행렬", '정밀도', '재현율', 'F1-score', 'PR Curve'], horizontal=True)
+
+        if radio4 == '혼동 행렬':
+            col1, col2 = st.columns(2)
+        
+            with col1:
+                st.image("./streamlit_images/defect_detection/confusion_matrix_yolo.png", use_column_width=True)
+        elif radio4 == '정밀도':
+            col1, col2 = st.columns(2)
+        
+            with col1:
+                st.image("./streamlit_images/defect_detection/precision_curve.png", use_column_width=True)
+        elif radio4 == '재현율':
+            col1, col2 = st.columns(2)
+        
+            with col1:
+                st.image("./streamlit_images/defect_detection/recall_curve.png", use_column_width=True)
+        elif radio4 == 'F1-score':
+            col1, col2 = st.columns(2)
+        
+            with col1:
+                st.image("./streamlit_images/defect_detection/f1_curve.png", use_column_width=True)
+        elif radio4 == 'PR Curve':
+            col1, col2 = st.columns(2)
+        
+            with col1:
+                st.image("./streamlit_images/defect_detection/pr_curve.png", use_column_width=True)
     with tab2[4]:
         st.subheader('Model Test')
+        st.code("""
+python ./yolov5/detect.py --weights ./yolov5/runs/my_experiment/weights/best.pt --img-size 640 --conf 0.5 
+                          --source ./rotation_test_resized --save-txt --save-conf --project ./yolov5/runs/detect/
+""")
+        # col1, col2 = st.columns(2)
+        # with col1 :
+        if st.button("Result"):
+            func.pcb_yolo()
