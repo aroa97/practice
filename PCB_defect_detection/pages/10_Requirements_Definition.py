@@ -12,7 +12,19 @@ with tab[0]:
 
 with tab[1]:
     st.subheader('Functional Requirements')
+
+    # ['RSQ-ID', '구분', '요구사항명', '요구사항 내용', '날짜', '작성자', '필수 여부']
+    df_fr = [
+        ['SFR-001', '기능', 'N/A', 'N/A', '24/00/00', '윤선준', '필수'],
+        ['SFR-002', '기능', 'N/A', 'N/A', '24/00/00', '윤선준', '필수'],
+        ['SFR-003', '기능', 'N/A', 'N/A', '24/00/00', '윤선준', '필수'],
+        ['SFR-004', '기능', 'N/A', 'N/A', '24/00/00', '윤선준', '필수'],
+        ['SFR-005', '기능', 'N/A', 'N/A', '24/00/00', '윤선준', '필수']
+    ]
+
     st.text("인공지능 모델 기능 요구사항")
+
+    st.table(df_fr)
 
 with tab[2]:
     st.subheader('Non-Functional Requirements')

@@ -3,9 +3,9 @@ from streamlit_function import func
 
 func.set_title(__file__)
 
-tab = st.tabs['시장조사','OKR']
+tab = st.tabs(['시장조사','OKR'])
 
 with tab[0]:
-    st.text("시장조사")
+    st.text('')
 with tab[-1]:
-    st.text("OKR")
+    st.subheader('Objectives and Key Results')

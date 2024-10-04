@@ -50,13 +50,16 @@ with tab[3]:
 
 with tab[4]:
     st.subheader("데이터베이스")
-    st.markdown("MySQL, Oracle")
+    st.markdown("MySQL, MongoDB, Oracle")
 
-    col1, col2, _, _ = st.columns(4)
+    col1, col2, col3, _, _ = st.columns(5)
     with col1 :
         func.image_resize('mysql_logo.png', __file__, 200)
-    with col2 :
+    with col3 :
         func.image_resize('oracle_logo.png', __file__, 200)
+    with col2 :
+        func.image_resize('mongodb_logo.png', __file__, 200)
+
 
 with tab[5]:
     st.subheader("머신 러닝 및 딥 러닝")
