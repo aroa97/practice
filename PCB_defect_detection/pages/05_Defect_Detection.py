@@ -365,6 +365,7 @@ python ./train.py --img-size 640 --batch-size 16 --epochs 100 --data ./data/data
                 st.image("./streamlit_images/defect_detection/pr_curve.png", use_column_width=True)
     with tab2[4]:
         st.subheader('Model Test')
+        st.text("bash")
         st.code("""
 python ./yolov5/detect.py --weights ./yolov5/runs/my_experiment/weights/best.pt --img-size 640 --conf 0.5 
                           --source ./rotation_test_resized --save-txt --save-conf --project ./yolov5/runs/detect/

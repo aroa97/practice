@@ -23,7 +23,7 @@ def image_resize(img_name, file, hsize):
 
 def pcb_yolo():
     original_folder = './rotation_test_resized'
-    result_folder = './yolov5/runs/detect/exp'
+    result_folder = './streamlit_images/defect/'
 
     original_files = [f for f in os.listdir(original_folder) if f.endswith('.jpg')]
 
