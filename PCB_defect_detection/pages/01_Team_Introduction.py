@@ -32,6 +32,8 @@ with col1:
 
         st.text("다른 홈페이지")
 
+        st.markdown("https://github.com/aroa97")
+
         st.link_button("Go to other homepage", "https://aroa97.github.io/Web/MyWeb/html/Main.html")
         st.image("./streamlit_images/team_introduction/background_image.png", use_column_width=True)
 
@@ -64,3 +66,13 @@ with col3:
 
     with st.expander("More"):
         st.subheader("인적사항")
+        st.text("생년월일 : 1983.08.23")
+        st.text("이메일 주소 : wsoll@naver.com")
+        st.markdown("**현재 세종교육에서 직업훈련(인공지능) 중**")
+
+        st.markdown("\n")
+
+        st.text("""
+스킬 : Python, Docker, Linux, Github, Opencv, 
+       Java, R, Django, MySQL, Javascript, AWS
+        """)
