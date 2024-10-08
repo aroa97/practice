@@ -119,8 +119,16 @@ with tab[1]:
         st.text("2. 불량 검출 정확도 98% 이상")
     with col3:
         st.markdown("### :red[Initiatives 해야 할 일]")
-        st.text("1. PCB 불량 검출 정확도 평가지표 선정")
-        st.text("2. PCB 훈련·테스트 데이터 수집")
-        st.text("3. WER, CER 측정 후 파라미터 수정")
+        st.markdown("""1. 6개 이상의 결함 감지
+                    \n- PCB 결함 유형 파악
+                    \n- 파악한 PCB 결함 유형에 대한 학습 데이터 수집
+                    """)
+        
+        st.markdown('\n')
+        
+        st.markdown("""2. 불량 검출 정확도 98% 이상
+                    \n- PCB 불량 검출 정확도 평가지표 선정
+                    \n- WER, CER 측정 후 파라미터 수정
+                    """)
 
         
