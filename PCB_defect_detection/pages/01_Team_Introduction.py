@@ -26,7 +26,7 @@ with col1:
         st.text("""
 그 외 스킬 : Scikit-learn, TensorFlow, Docker, 
             Linux, Github, MySQL, Oracle, AWS, 
-            django, R, Html, Css, Unity""")
+            Flask, Django, R, Html, Css, Unity""")
 
         st.markdown("\n")
 
