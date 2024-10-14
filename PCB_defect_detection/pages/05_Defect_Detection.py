@@ -263,7 +263,7 @@ history = model.fit(trainGen,
 
     col1 , col2, col3 = st.columns(3)    
 elif radio_sidebar == '실물 데이터셋':
-    tab2 = st.tabs(['데이터 전처리', '학습시킨 결함 종류', '모델 학습', '모델 평가', '모델 테스트'])
+    tab2 = st.tabs(['데이터 전처리', '학습시킨 결함 종류', '모델 학습', '모델 평가', '모델 테스트', "모델 테스트2"])
 
     with tab2[0]:
         st.subheader('Data Preprocessing')
@@ -370,7 +370,51 @@ python ./train.py --img-size 640 --batch-size 16 --epochs 100 --data ./data/data
 python ./yolov5/detect.py --weights ./yolov5/runs/my_experiment/weights/best.pt --img-size 640 --conf 0.5 
                           --source ./rotation_test_resized --save-txt --save-conf --project ./yolov5/runs/detect/
 """)
-        # col1, col2 = st.columns(2)
-        # with col1 :
+        
         if st.button("Result"):
             func.pcb_yolo()
+    with tab2[5]:
+        st.subheader('Model Test2')
+
+        st.markdown("**Opencv를 활용한 모델 테스트**")
+        col1, col2 = st.columns(2)
+        with col1 :
+            st.image('./streamlit_images/defect_detection/opencv_videocapture.gif', use_column_width=True)
+
+        with st.expander("Source"):
+            st.code("""
+import cv2
+import torch
+
+# 학습된 YOLOv5 모델 로드
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='./yolov5/runs/my_experiment/weights/best.pt', force_reload=True)
+
+# 웹캠 열기
+cap = cv2.VideoCapture(0)
+
+# 카메라가 열리지 않을 경우 오류 메시지 출력
+if not cap.isOpened():
+    print("Error: Could not open camera.")
+    exit()
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        print("Error: Could not read frame.")
+        break
+
+    # 객체 감지
+    results = model(frame)
+
+    # 결과 렌더링
+    results.render()
+
+    # 프레임 표시
+    cv2.imshow('Defect Detection', frame)
+
+    # 'q' 키를 누르면 종료
+    if cv2.waitKey(1) & 0xFF == ord('q'): break
+
+cap.release()
+cv2.destroyAllWindows()
+""")
